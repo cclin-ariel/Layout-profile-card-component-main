@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Profile card component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      min-width: 375px;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      /* background: color image attachment repeat poition / size */
+      background: radial-gradient(circle at center, hsl(227, 10%, 46%), hsl(185, 75%, 39%));
+    }
+
+    .circles {
+      width: 100%;
+      overflow: hidden;
+      position: absolute;
+    }
+
+    .top-background {
+      transform: translate(15%, -35%);
+      z-index: 0;
+    }
+
+    .bottom-background {
+      transform: translate(20%, 45%);
+      z-index: 0;
+    }
+
+    @media screen and (min-width: 1441px)
+    {
+      .top-background {transform: translate(15%, -35%);}
+      .bottom-background {transform: translate(20%, 45%);}
+    }
+    @media screen and (max-width: 1440px)
+    {
+      .top-background {transform: translate(-20%, 5%);}
+      .bottom-background {transform: translate(65%, 0%);}
+    }
+    @media screen and (max-width: 1200px)
+     {
+      .top-background {transform: translate(-45%, 5%);}
+      .bottom-background {transform: translate(50%, 0%);}
+    }
+    @media screen and (max-width: 786px)
+     {
+      .top-background {transform: translate(-55%, 5%);}
+      .bottom-background {transform: translate(30%, 0%);}
+    }
+    @media screen and (max-width: 375px)
+     {
+      .top-background {transform: translate(-78%, 5%);}
+      .bottom-background {transform: translate(5%, 0%);}
+    }
+
+    .box {
+      min-width: 340px;
+      min-height: 390px;
+      background-color: white;
+      border-radius: 10px;
+      font-family: 'Kumbh Sans', sans-serif;
+      z-index: 1;
+    }
+
+    .header {
+      width: 100%;
+      height: 140px;
+      background-image: url(./images/bg-pattern-card.svg);
+      border-radius: 10px 10px 0 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .pic {
+      margin-top: 95px;
+    }
+
+    .header img {
+      border: white 5px solid;
+      background-color: #fff;
+      border-radius: 50%;
+      object-fit: cover;
+
+    }
+
+    .content {
+      width: 100%;
+      height: 42%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      padding: 20px 0;
+    }
+
+    h2 span {
+      color: hsl(0, 0%, 59%);
+      font-weight: 400;
+
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: 400;
+      color: hsl(0, 0%, 59%);
+      padding-bottom: 30px;
+    }
+
+    .footer {
+      width: 100%;
+      height: 20%;
+      border-top: 2px solid rgba(219, 219, 219, 0.712);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .footer-item {
+      font-weight: 700;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 23px;
+    }
+
+    .footer-item span {
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: hsl(0, 0%, 59%);
+      font-weight: 500;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <d class="container">
+    <div class="circles">
+      <img class="top-background" src="./images/bg-pattern-top.svg" alt="top-background">
+      <img class="bottom-background" src="./images/bg-pattern-bottom.svg" alt="bottom-background">
+    </div>
+    <div class="box">
+      <div class="header">
+        <div class="pic">
+          <img src="./images/image-victor.jpg" alt="user photo">
+        </div>
+      </div>
+      <div class="content">
+        <h2>Victor Crest <span>26</span></h2>
+        <p class="location">London</p>
+      </div>
+      <div class="footer">
+        <div class="footer-item">80K
+          <span>Followers</span></div>
+        <div class="footer-item">803K
+          <span>Likes</span> </div>
+        <div class="footer-item">1.4K
+          <span>Photos</span> </div>
+      </div>
+    </div>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+</body>
+
+</html>
