@@ -27,54 +27,37 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      overflow: hidden;
+      position: relative;
 
       /* background: color image attachment repeat poition / size */
       background: radial-gradient(circle at center, hsl(227, 10%, 46%), hsl(185, 75%, 39%));
     }
 
-    .circles {
-      width: 100%;
-      overflow: hidden;
-      position: absolute;
-    }
-
     .top-background {
-      transform: translate(15%, -35%);
+      position: absolute;
+      top: -480px;
+      left: -667px;
       z-index: 0;
     }
-
     .bottom-background {
-      transform: translate(20%, 45%);
+      position: absolute;
+      bottom: -630px;
+      right: -510px;
       z-index: 0;
     }
-
     @media screen and (min-width: 1441px)
     {
-      .top-background {transform: translate(15%, -35%);}
-      .bottom-background {transform: translate(20%, 45%);}
+      .top-background {top: -410px; left: -126px;}
+      .bottom-background {right: -200px; bottom: -290px;}
     }
-    @media screen and (max-width: 1440px)
+    @media screen and (max-width: 1440px) and (min-width: 768px)
     {
-      .top-background {transform: translate(-20%, 5%);}
-      .bottom-background {transform: translate(65%, 0%);}
+      .top-background {top: -300px; left: -200px;}
+      .bottom-background {right: -295px; bottom: -200px;}
     }
-    @media screen and (max-width: 1200px)
-     {
-      .top-background {transform: translate(-45%, 5%);}
-      .bottom-background {transform: translate(50%, 0%);}
-    }
-    @media screen and (max-width: 786px)
-     {
-      .top-background {transform: translate(-55%, 5%);}
-      .bottom-background {transform: translate(30%, 0%);}
-    }
-    @media screen and (max-width: 375px)
-     {
-      .top-background {transform: translate(-78%, 5%);}
-      .bottom-background {transform: translate(5%, 0%);}
-    }
-
-    .box {
+ 
+    .card {
       min-width: 340px;
       min-height: 390px;
       background-color: white;
@@ -170,12 +153,10 @@
 </head>
 
 <body>
-  <d class="container">
-    <div class="circles">
-      <img class="top-background" src="./images/bg-pattern-top.svg" alt="top-background">
-      <img class="bottom-background" src="./images/bg-pattern-bottom.svg" alt="bottom-background">
-    </div>
-    <div class="box">
+  <div class="container">
+    <img class="top-background" src="./images/bg-pattern-top.svg" alt="top-background">
+    <img class="bottom-background" src="./images/bg-pattern-bottom.svg" alt="bottom-background">
+    <div class="card">
       <div class="header">
         <div class="pic">
           <img src="./images/image-victor.jpg" alt="user photo">
